@@ -27,6 +27,8 @@ global filepath "write filepath here X:\...."
 * 2. load the data
 use "XXXXX.dta", clear
 
+* 3. Start a log
+log using "XXXXXX.log", replace
 
 ****************************** clean variables **********************************
 * since coding of some variables changed from numerical to characters over time
