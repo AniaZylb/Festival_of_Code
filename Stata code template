@@ -1,0 +1,40 @@
+***********************************************************
+* Title: XXXx
+* Authors: XXXX
+* Date created: XXX
+* Date modified: XXX
+***********************************************************
+
+/************************************************************
+DO-FILE DESCRIPTION:
+Briefly describe what the do-file does, where it fits with the other ones
+
+For example:
+"this do-file contains some preliminary cleaning rules for variables 
+recorded in HES. The code ensures e.g. consistent coding of missing values, 
+removes implausible values etc. 
+We used this do-file on an extract of HES admissions in children aged under 1 year old
+prior to identifying births and linking episodes into admissions."
+************************************************************/
+
+
+********************** housekeeping  **********************************
+
+* 1. use global macro filepath to define where you save the data created in the process
+* don’t release absolute file paths if you work with sensitive data
+global filepath "write filepath here X:\...."
+
+* 2. load the data
+use "XXXXX.dta", clear
+
+
+****************************** clean variables **********************************
+* since coding of some variables changed from numerical to characters over time
+* we save these variables as string for consistency over years
+tostring admimeth, replace
+tostring nhsnoind, replace
+tostring sushrg, replace
+tostring hrgnhs, replace
+tostring opcs43, replace
+tostring numbaby, replace
+
