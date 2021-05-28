@@ -1,4 +1,4 @@
-# Festival_of_Code 2021
+# Festival of Code 2021
 ## Why is it important?
 README is the first thing people will see when they open your repository. 
 Describe brieflt what your code does, why it is worth looking at, what your project is about. 
